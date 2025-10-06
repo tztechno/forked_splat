@@ -6,9 +6,9 @@ It is depend on published ngrok url.
 
 All splat files are saved in one url in huggingface.
 
-**https://4b3b7accfa2c.ngrok-free.app/**
+https://splat-three.vercel.app/
 
-**https://4b3b7accfa2c.ngrok-free.app/?url=bike.splat**
+https://splat-three.vercel.app/?url=fountain.splat
 
-**https://4b3b7accfa2c.ngrok-free.app/?url=fountain.splat**
+https://splat-three.vercel.app/?url=bike.splat
  
