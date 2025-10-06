@@ -1,8 +1,10 @@
 
 
-# How to change splat file like this.
+# How to change splat files.
 
-It is depend on ngrok url.
+It is depend on published ngrok url.
+
+All splat files are saved in one url in huggingface.
 
 **https://4b3b7accfa2c.ngrok-free.app/**
 
