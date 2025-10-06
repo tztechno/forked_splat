@@ -1,8 +1,8 @@
 
 
-we can change splat file like this.
+# we can change splat file like this.
 
-it is depend on ngrok utl.
+it is depend on ngrok url.
 
 https://4b3b7accfa2c.ngrok-free.app/
 
