@@ -14,4 +14,8 @@ https://splat-three.vercel.app/?url=bike.splat
 
 https://splat-three.vercel.app/?url=church.splat
  
-https://splat-three.vercel.app/?url=cyprus.splat
+https://splat-three.vercel.app/?url=wall.splat
+
+https://splat-three.vercel.app/?url=st_pauls.splat
+
+https://splat-three.vercel.app/?url=dioscuri.splat
