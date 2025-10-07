@@ -19,3 +19,7 @@ https://splat-three.vercel.app/?url=wall.splat
 https://splat-three.vercel.app/?url=st_pauls.splat
 
 https://splat-three.vercel.app/?url=dioscuri.splat
+
+https://splat-three.vercel.app/?url=chairs.splat
+
+https://splat-three.vercel.app/?url=taj_mahal.splat
