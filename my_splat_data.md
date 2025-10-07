@@ -11,7 +11,7 @@ https://splat-three.vercel.app/
 https://splat-three.vercel.app/?url=fountain.splat
 
 https://splat-three.vercel.app/?url=bike.splat
- 
-https://splat-three.vercel.app/?url=cyprus.splat
 
 https://splat-three.vercel.app/?url=church.splat
+ 
+https://splat-three.vercel.app/?url=cyprus.splat
