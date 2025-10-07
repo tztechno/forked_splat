@@ -2,8 +2,6 @@
 
 # How to change splat files.
 
-It is depend on published ngrok url.
-
 All splat files are saved in one url in huggingface.
 
 https://splat-three.vercel.app/
@@ -23,3 +21,5 @@ https://splat-three.vercel.app/?url=dioscuri.splat
 https://splat-three.vercel.app/?url=chairs.splat
 
 https://splat-three.vercel.app/?url=taj_mahal.splat
+
+https://splat-three.vercel.app/?url=cyprus.splat
