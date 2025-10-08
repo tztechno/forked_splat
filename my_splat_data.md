@@ -25,3 +25,7 @@ https://splat-three.vercel.app/?url=chairs.splat
 https://splat-three.vercel.app/?url=taj_mahal.splat
 
 https://splat-three.vercel.app/?url=cyprus.splat
+
+https://splat-three.vercel.app/?url=drone_movie.splat
+
+https://splat-three.vercel.app/?url=around_car.splat
