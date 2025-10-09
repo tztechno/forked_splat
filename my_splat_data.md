@@ -12,6 +12,8 @@ https://splat-three.vercel.app/?url=fountain.splat
 
 https://splat-three.vercel.app/?url=fountain6000.splat
 
+https://splat-three.vercel.app/?url=fountain30000.splat#[-0.53,0.82,-0.19,0,-0.27,0.06,0.96,0,0.81,0.56,0.19,0,0.57,-1.91,7.05,1]
+
 https://splat-three.vercel.app/?url=bike.splat
 
 https://splat-three.vercel.app/?url=church.splat
