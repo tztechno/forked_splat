@@ -4,7 +4,9 @@
 
 All splat files are saved in [huggingface](https://huggingface.co/datasets/stpete2/splat).
 
-https://splat-three.vercel.app/
+https://splat-three.vercel.app/ (deployed on vercel)
+
+[from photos w/camera info]
 
 https://splat-three.vercel.app/?url=fountain.splat
 
@@ -26,8 +28,13 @@ https://splat-three.vercel.app/?url=taj_mahal.splat
 
 https://splat-three.vercel.app/?url=cyprus.splat
 
+[from movie wo/camera info]
+
 https://splat-three.vercel.app/?url=town_drone.splat
 
 https://splat-three.vercel.app/?url=around_car.splat
+
+https://splat-three.vercel.app/?url=around_plant.splat
+
 
 
