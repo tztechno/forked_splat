@@ -36,5 +36,11 @@ https://splat-three.vercel.app/?url=around_car.splat
 
 https://splat-three.vercel.app/?url=around_plant.splat
 
+**[external data]**
+
+https://splat-three.vercel.app/?url=nike_model.splat
+
+
+
 
 
