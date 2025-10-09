@@ -4,7 +4,7 @@
 
 My splat data are saved [here](https://huggingface.co/datasets/stpete2/splat).
 
-Modified 3D gaussian splat viewer is [here](https://splat-three.vercel.app/).
+Modified 3D gaussian splat viewer is available [here](https://splat-three.vercel.app/).
 
 **[from photos w/camera info]**
 
