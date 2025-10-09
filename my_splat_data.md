@@ -2,7 +2,7 @@
 
 # **my splat data**
 
-All splat files are saved in [huggingface](https://huggingface.co/datasets/stpete2/splat).
+All splat files are saved in my [huggingface](https://huggingface.co/datasets/stpete2/splat).
 
 https://splat-three.vercel.app/
 
