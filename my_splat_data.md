@@ -4,7 +4,7 @@
 
 All splat files are saved in my [huggingface](https://huggingface.co/datasets/stpete2/splat).
 
-Viewer app is here(https://splat-three.vercel.app/).
+Viewer app is [here](https://splat-three.vercel.app/).
 
 **[from photos w/camera info]**
 
