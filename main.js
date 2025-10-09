@@ -739,20 +739,19 @@ let viewMatrix = defaultViewMatrix;
 async function main() {
     let carousel = true;
     const params = new URLSearchParams(location.search);
+
     try {
         viewMatrix = JSON.parse(decodeURIComponent(location.hash.slice(1)));
         carousel = false;
     } catch (err) {}
+
     const url = new URL(
-        // "nike.splat",
-        // location.href,
-        //params.get("url") || "train.splat",
-        //"https://huggingface.co/cakewalk/splat-data/resolve/main/",
-        
+
         params.get("url") || "fountain.splat",
         "https://huggingface.co/datasets/stpete2/splat/resolve/main/"
-        
+   
     );
+
     const req = await fetch(url, {
         mode: "cors", // no-cors, *cors, same-origin
         credentials: "omit", // include, *same-origin, omit
@@ -764,6 +763,8 @@ async function main() {
     const rowLength = 3 * 4 + 3 * 4 + 4 + 4;
     const reader = req.body.getReader();
     let splatData = new Uint8Array(req.headers.get("content-length"));
+
+
 
     const downsample =
         splatData.length / rowLength > 500000 ? 1 : 1 / devicePixelRatio;
@@ -924,8 +925,9 @@ async function main() {
     let activeKeys = [];
     let currentCameraIndex = 0;
 
+    // main.js の window.addEventListener("keydown", ...) セクションに追加
+
     window.addEventListener("keydown", (e) => {
-        // if (document.activeElement != document.body) return;
         carousel = false;
         if (!activeKeys.includes(e.code)) activeKeys.push(e.code);
         if (/\d/.test(e.key)) {
@@ -943,6 +945,8 @@ async function main() {
             viewMatrix = getViewMatrix(cameras[currentCameraIndex]);
         }
         camid.innerText = "cam  " + currentCameraIndex;
+
+        // 既存のKeyV機能
         if (e.code == "KeyV") {
             location.hash =
                 "#" +
@@ -950,11 +954,92 @@ async function main() {
                     viewMatrix.map((k) => Math.round(k * 100) / 100),
                 );
             camid.innerText = "";
-        } else if (e.code === "KeyP") {
+        }
+        // 新機能: KeyC で現在のカメラ位置情報を表示・コピー
+        else if (e.code === "KeyC") {
+            const roundedMatrix = viewMatrix.map((k) => Math.round(k * 100) / 100);
+            const matrixString = JSON.stringify(roundedMatrix);
+
+            // クリップボードにコピー
+            navigator.clipboard.writeText(matrixString).then(() => {
+                console.log("Camera position copied to clipboard!");
+                console.log("View Matrix:", matrixString);
+
+                // URLも生成して表示
+                const url = window.location.origin + window.location.pathname +
+                    "?url=" + new URLSearchParams(window.location.search).get("url") +
+                    "#" + encodeURIComponent(matrixString);
+                console.log("Full URL:", url);
+
+                // 画面に一時的に表示
+                showCameraInfo(roundedMatrix, url);
+            }).catch(err => {
+                console.error("Failed to copy:", err);
+                alert("View Matrix: " + matrixString);
+            });
+        }
+        // KeyRでカメラ情報表示をリセット
+        else if (e.code === "KeyR") {
+            const infoDiv = document.getElementById("cameraInfo");
+            if (infoDiv) {
+                infoDiv.style.display = "none";
+            }
+        }
+        else if (e.code === "KeyP") {
             carousel = true;
             camid.innerText = "";
         }
     });
+
+    // カメラ情報を表示する関数を追加
+    function showCameraInfo(matrix, url) {
+        let infoDiv = document.getElementById("cameraInfo");
+
+        if (!infoDiv) {
+            infoDiv = document.createElement("div");
+            infoDiv.id = "cameraInfo";
+            infoDiv.style.cssText = `
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            max-width: 500px;
+            z-index: 1000;
+            word-wrap: break-word;
+        `;
+            document.body.appendChild(infoDiv);
+        }
+
+        infoDiv.innerHTML = `
+        <div style="margin-bottom: 10px; color: #4CAF50; font-weight: bold;">
+            ✓ Camera Position Copied!
+        </div>
+        <div style="margin-bottom: 5px;">View Matrix:</div>
+        <div style="background: rgba(255,255,255,0.1); padding: 5px; border-radius: 3px; margin-bottom: 10px;">
+            ${JSON.stringify(matrix, null, 2)}
+        </div>
+        <div style="margin-bottom: 5px;">Full URL:</div>
+        <div style="background: rgba(255,255,255,0.1); padding: 5px; border-radius: 3px; font-size: 10px; max-height: 100px; overflow-y: auto;">
+            ${url}
+        </div>
+        <div style="margin-top: 10px; font-size: 11px; color: #888;">
+            Press 'R' to hide | Press 'C' again to update
+        </div>
+    `;
+
+        infoDiv.style.display = "block";
+
+        // 10秒後に自動的に隠す
+        setTimeout(() => {
+            infoDiv.style.opacity = "0.5";
+        }, 5000);
+    }
+
     window.addEventListener("keyup", (e) => {
         activeKeys = activeKeys.filter((k) => k !== e.code);
     });
