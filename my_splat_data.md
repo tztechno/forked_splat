@@ -1,6 +1,6 @@
 
 
-# How to change splat files.
+# **my splat data**
 
 All splat files are saved in [huggingface](https://huggingface.co/datasets/stpete2/splat).
 
