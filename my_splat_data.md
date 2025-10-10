@@ -12,6 +12,8 @@ https://splat-three.vercel.app/?url=fountain.splat#[-0.64,0.76,-0.04,0,0.09,0.14
 
 https://splat-three.vercel.app/?url=fountain6000.splat#[-0.64,0.76,-0.04,0,0.09,0.14,0.98,0,0.76,0.63,-0.16,0,0.34,-1.87,7.57,1]
 
+https://splat-three.vercel.app/?url=fountain6000dgt10.splat#[-0.64,0.76,-0.04,0,0.09,0.14,0.98,0,0.76,0.63,-0.16,0,0.34,-1.87,7.57,1]
+
 https://splat-three.vercel.app/?url=fountain30000.splat#[-0.64,0.76,-0.04,0,0.09,0.14,0.98,0,0.76,0.63,-0.16,0,0.34,-1.87,7.57,1]
 
 https://splat-three.vercel.app/?url=fountain100000.splat#[-0.64,0.76,-0.04,0,0.09,0.14,0.98,0,0.76,0.63,-0.16,0,0.34,-1.87,7.57,1]
