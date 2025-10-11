@@ -749,7 +749,7 @@ async function main() {
 
     const url = new URL(
 
-        params.get("url") || "fountain.splat",
+        params.get("url") || "fountain_photo.splat",
         "https://huggingface.co/datasets/stpete2/splat/resolve/main/"
    
     );
